@@ -4,5 +4,11 @@
 
   </div>
   <img src="http://www.rockhamptoncitycentre.com.au/wp-content/themes/rockhampton/images/google-map-img.jpg" class="map">
-  	<%= @json_data %>
+  	
+  <% @imgs_user.first(3).each do |imgs| %>
+  	<%=raw "<img src='"+imgs+"' height='300px' width='300px'/>" %>
+  <% end %>
+
+  <%= @json_data %>
+
 <% end %>

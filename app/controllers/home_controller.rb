@@ -20,9 +20,16 @@ class HomeController < ApplicationController
 
 		# Get profile image
 		# https://chunksofco.de/neatly-dealing-with-json-parse-d-hashes-in-ruby-6a99d1740288
-		response_hash = JSON.parse(@json_data)
-		@img_user = response_hash['entry_data']['ProfilePage'][0]['graphql']['user']['profile_pic_url']
+		json_parse = JSON.parse(@json_data)
+		@img_user = json_parse['entry_data']['ProfilePage'][0]['graphql']['user']['profile_pic_url']
 
+		# Get last 3 images
+		@imgs_user = ""
+		(0..2).each do |i|
+			@imgs_user += json_parse['entry_data']['ProfilePage'][0]['graphql']['user']['edge_owner_to_timeline_media']['edges'][i]['node']['display_url'] + ", "
+		end
+		@imgs_user = @imgs_user.split(",")
+		print @imgs_user
 	end
   end
 end
