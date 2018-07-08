@@ -9,11 +9,12 @@ class HomeController < ApplicationController
 		uri = URI(url)
 		response = Net::HTTP.get(uri)
 		doc = Nokogiri::HTML(response)
-		@scripts = doc.css('script')
-		@scripts = @scripts.to_s
-		startstring = "_sharedData"
-		endstring = "</script"
-		@x = @scripts[/#{startstring}(.*?)#{endstring}/m, 1]
+		script = doc.css('script')
+		script = script.to_s
+		startstring = "window._sharedData"
+		endstring = ";</script>"
+		@json_data = script[/#{startstring}(.*?)#{endstring}/m, 1].gsub("=", "")
+		#@y = ActiveSupport::JSON.decode(@x)
 	end
   end
 end
