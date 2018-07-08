@@ -1,7 +1,7 @@
 <% if @user %>
   <head>
   	<script  src="http://maps.google.com/maps/api/js?sensor=false"></script> 
-	<script src="jquery.gomap-1.3.3.min.js"></script>
+	
 
 	<script type="text/javascript">
 		
@@ -17,6 +17,7 @@
 	</head>
 	
   <div class="profile_header">
+<<<<<<< HEAD
   <img src="https://scontent-mad1-1.cdninstagram.com/vp/7512ec91b64619d2d3b092a19ea7c708/5BE86D9C/t51.2885-19/s150x150/30903588_162073534459225_7418444646692421632_n.jpg?efg=eyJ1cmxnZW4iOiJ1cmxnZW5fZnJvbV9pZyJ9" height="50px" width="50px" class="profile_img"><p id="user"><%= @user %></p> 
   
   </div>
@@ -29,3 +30,11 @@
   <p> <%= @x %></p>
 <% end %>
 
+=======
+  <img src="<%= @img_user %>" height="50px" width="50px" class="profile_img"><p id="user"><%= @user %></p> 
+
+  </div>
+  <img src="http://www.rockhamptoncitycentre.com.au/wp-content/themes/rockhampton/images/google-map-img.jpg" class="map">
+  	<%= @json_data %>
+<% end %>
+>>>>>>> 5c2ba93f1aa3969fa64268a0f59df590cc1069ff
