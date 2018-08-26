@@ -1,24 +1,10 @@
-# README
+# TODO
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Implementar mapa JS con las últimas 3 ubicaciones de donde ha estado, coger del JSON
+- Arreglar estética
+- Añadir gráfico estádisticas, cuantas veces sube foto al mes..,
 
-Things you may want to cover:
+- Uso de una cuenta que permita seguir a una persona y ver su perfil privado. (Notificación de que ha aceptado la peticion, en el navbar)
 
-* Ruby version
+- Últimos tweets
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
